@@ -17,7 +17,7 @@ public boolean canReceive();
 
 public boolean canExtract();
 
-public NBTTagCompound writeToNBT(NBTTagCompound compound);
+public void writeToNBT(NBTTagCompound compound);
 
 public void readFromNBT(NBTTagCompound compound);
 

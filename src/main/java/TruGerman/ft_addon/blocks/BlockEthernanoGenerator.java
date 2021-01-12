@@ -50,8 +50,11 @@ public class BlockEthernanoGenerator extends BlockBase
 		{
 			playerIn.openGui(FT_Addon.instance, RefStrings.GUI_ETHERNANO_GEN, worldIn, pos.getX(), pos.getY(), pos.getZ());
 				TileEntityEthernanoGenerator tileentity = (TileEntityEthernanoGenerator)worldIn.getTileEntity(pos);
+				printValues(tileentity, playerIn);
+				playerIn.sendMessage(new TextComponentString("Server:"));
 				playerIn.sendMessage(new TextComponentString("Ethernano:"+Integer.toString(tileentity.getValue(3))));
 				playerIn.sendMessage(new TextComponentString("Energy:"+Integer.toString(tileentity.getValue(1))));
+				
 				
 		}
 		return true;
@@ -69,6 +72,13 @@ public class BlockEthernanoGenerator extends BlockBase
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0, new ModelResourceLocation(getRegistryName(), "inventory"));
     }
 	
+	@SideOnly(Side.CLIENT)
+	public void printValues(TileEntityEthernanoGenerator te, EntityPlayer playerIn)
+	{
+		playerIn.sendMessage(new TextComponentString("Client:"));
+		playerIn.sendMessage(new TextComponentString("Ethernano:"+Integer.toString(te.getValue(3))));
+		playerIn.sendMessage(new TextComponentString("Energy:"+Integer.toString(te.getValue(1))));
+	}
 	
 	
 	
