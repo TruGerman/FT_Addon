@@ -51,6 +51,7 @@ public class BlockEthernanoGenerator extends BlockBase
 			playerIn.openGui(FT_Addon.instance, RefStrings.GUI_ETHERNANO_GEN, worldIn, pos.getX(), pos.getY(), pos.getZ());
 				TileEntityEthernanoGenerator tileentity = (TileEntityEthernanoGenerator)worldIn.getTileEntity(pos);
 <<<<<<< Upstream, based on branch 'beta' of https://github.com/TruGerman/FT_Addon
+<<<<<<< Upstream, based on branch 'beta' of https://github.com/TruGerman/FT_Addon
 				/*printValues(tileentity, playerIn);
 				playerIn.sendMessage(new TextComponentString("Server:"));
 				playerIn.sendMessage(new TextComponentString("Ethernano:"+Integer.toString(tileentity.getValue(3))));
@@ -82,8 +83,13 @@ public class BlockEthernanoGenerator extends BlockBase
 		
 	}
 =======
+=======
+				printValues(tileentity, playerIn);
+				playerIn.sendMessage(new TextComponentString("Server:"));
+>>>>>>> c01adbc Small stuff
 				playerIn.sendMessage(new TextComponentString("Ethernano:"+Integer.toString(tileentity.getValue(3))));
 				playerIn.sendMessage(new TextComponentString("Energy:"+Integer.toString(tileentity.getValue(1))));
+				
 				
 		}
 		return true;
@@ -101,7 +107,17 @@ public class BlockEthernanoGenerator extends BlockBase
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0, new ModelResourceLocation(getRegistryName(), "inventory"));
     }
 	
+<<<<<<< Upstream, based on branch 'beta' of https://github.com/TruGerman/FT_Addon
 >>>>>>> 50e1f23 removed unused imports
+=======
+	@SideOnly(Side.CLIENT)
+	public void printValues(TileEntityEthernanoGenerator te, EntityPlayer playerIn)
+	{
+		playerIn.sendMessage(new TextComponentString("Client:"));
+		playerIn.sendMessage(new TextComponentString("Ethernano:"+Integer.toString(te.getValue(3))));
+		playerIn.sendMessage(new TextComponentString("Energy:"+Integer.toString(te.getValue(1))));
+	}
+>>>>>>> c01adbc Small stuff
 	
 	
 	

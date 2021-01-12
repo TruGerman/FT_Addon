@@ -47,6 +47,7 @@ public class TileEntityEthernanoGenerator extends TileEntity implements ITickabl
 		if (hasDiaBlock())
 		{
 <<<<<<< Upstream, based on branch 'beta' of https://github.com/TruGerman/FT_Addon
+<<<<<<< Upstream, based on branch 'beta' of https://github.com/TruGerman/FT_Addon
 			EStorage.receiveEthernano(20);
 			markDirty();
 		}
@@ -110,11 +111,14 @@ public class TileEntityEthernanoGenerator extends TileEntity implements ITickabl
 		case 2: this.Storage.setEnergy(Math.min(value, this.Storage.getMaxEnergyStored()));
 =======
 			EStorage.receiveEthernano(50);
+=======
+			EStorage.receiveEthernano(20);
+>>>>>>> c01adbc Small stuff
 			markDirty();
 		}
 		if(hasGoldBlock())
 		{
-			Storage.receiveEnergy(10, false);
+			Storage.receiveEnergy(100, false);
 			markDirty();
 		}
 		produceEthernano();
@@ -126,8 +130,8 @@ public class TileEntityEthernanoGenerator extends TileEntity implements ITickabl
 		{
 			if(this.getValue(3)<this.getValue(4))
 			{
-				Storage.extractEnergy(10, false);
-				EStorage.receiveEthernano(1);
+				this.Storage.extractEnergy(10, false);
+				this.EStorage.receiveEthernano(1);
 				markDirty();
 				return true;
 			}
