@@ -3,7 +3,6 @@ package TruGerman.ft_addon.items;
 import TruGerman.ft_addon.FT_Addon;
 import TruGerman.ft_addon.init.ItemInit;
 import TruGerman.ft_addon.interfaces.IHasModel;
-import TruGerman.ft_addon.util.RefStrings;
 import TruGerman.ft_addon.util.UtilPackage;
 import net.minecraft.item.Item;
 

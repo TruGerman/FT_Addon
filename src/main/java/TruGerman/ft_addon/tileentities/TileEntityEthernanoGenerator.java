@@ -1,20 +1,15 @@
 package TruGerman.ft_addon.tileentities;
 
-import TruGerman.ft_addon.interfaces.INBTable;
 import TruGerman.ft_addon.util.CustomEnergyStorage;
 import TruGerman.ft_addon.util.EthernanoStorage;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.network.NetworkManager;
-import net.minecraft.network.play.server.SPacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentTranslation;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.energy.CapabilityEnergy;
 
 public class TileEntityEthernanoGenerator extends TileEntity implements ITickable
 {

@@ -1,6 +1,5 @@
 package TruGerman.ft_addon.containers;
 
-import TruGerman.ft_addon.guis.GuiEthernanoGenerator;
 import TruGerman.ft_addon.tileentities.TileEntityEthernanoGenerator;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
