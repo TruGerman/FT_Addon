@@ -7,6 +7,7 @@ import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.TextComponentString;
 
 public class GuiEthernanoGenerator extends GuiContainer
 {
@@ -41,6 +42,8 @@ public class GuiEthernanoGenerator extends GuiContainer
 		//debugging purposes
 		int e = this.tileentity.getValue(3);
 		int E = this.tileentity.getValue(1);
+		this.mc.player.sendMessage(new TextComponentString("e="+Integer.toString(e)));
+		this.mc.player.sendMessage(new TextComponentString("E="+Integer.toString(E)));
 		
 		this.fontRenderer.drawString("Ethernano:"+Integer.toString(e), this.xSize/2+5, 54, 7777);
 		this.fontRenderer.drawString("Energy:"+Integer.toString(E), this.xSize/2-80, 54, 7777);
