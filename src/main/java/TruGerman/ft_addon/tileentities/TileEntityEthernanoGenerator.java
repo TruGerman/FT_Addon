@@ -62,6 +62,7 @@ public class TileEntityEthernanoGenerator extends TileEntity implements ITickabl
 	protected boolean produceEthernano()
 	{
 		if(this.getValue(1)>=10)
+<<<<<<< Upstream, based on branch 'beta' of https://github.com/TruGerman/FT_Addon
 		{
 			if(this.getValue(3)<this.getValue(4))
 			{
@@ -127,6 +128,8 @@ public class TileEntityEthernanoGenerator extends TileEntity implements ITickabl
 	protected boolean produceEthernano()
 	{
 		if(this.getValue(1)>10)
+=======
+>>>>>>> e1fb193 minor error, unrelated to main problem
 		{
 			if(this.getValue(3)<this.getValue(4))
 			{
@@ -173,8 +176,12 @@ public class TileEntityEthernanoGenerator extends TileEntity implements ITickabl
 		{
 		case 1: this.EStorage.setEthernano(Math.min(value, this.EStorage.getMaxEthernano()));
 		break;
+<<<<<<< Upstream, based on branch 'beta' of https://github.com/TruGerman/FT_Addon
 		case 2: this.Storage.setEnergy(Math.min(value, this.EStorage.getMaxEthernano()));
 >>>>>>> 50e1f23 removed unused imports
+=======
+		case 2: this.Storage.setEnergy(Math.min(value, this.Storage.getMaxEnergyStored()));
+>>>>>>> e1fb193 minor error, unrelated to main problem
 		break;
 		}
 		

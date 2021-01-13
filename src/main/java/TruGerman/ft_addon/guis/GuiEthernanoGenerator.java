@@ -8,6 +8,9 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
 <<<<<<< Upstream, based on branch 'beta' of https://github.com/TruGerman/FT_Addon
+<<<<<<< Upstream, based on branch 'beta' of https://github.com/TruGerman/FT_Addon
+=======
+>>>>>>> e1fb193 minor error, unrelated to main problem
 import net.minecraft.util.text.TextComponentString;
 
 public class GuiEthernanoGenerator extends GuiContainer
@@ -43,6 +46,7 @@ public class GuiEthernanoGenerator extends GuiContainer
 		//debugging purposes
 		int e = this.tileentity.getValue(3);
 		int E = this.tileentity.getValue(1);
+<<<<<<< Upstream, based on branch 'beta' of https://github.com/TruGerman/FT_Addon
 		//this.mc.player.sendMessage(new TextComponentString("e="+Integer.toString(e)));
 		//this.mc.player.sendMessage(new TextComponentString("E="+Integer.toString(E)));
 =======
@@ -81,6 +85,10 @@ public class GuiEthernanoGenerator extends GuiContainer
 		int e = this.tileentity.getValue(3);
 		int E = this.tileentity.getValue(1);
 >>>>>>> 50e1f23 removed unused imports
+=======
+		this.mc.player.sendMessage(new TextComponentString("e="+Integer.toString(e)));
+		this.mc.player.sendMessage(new TextComponentString("E="+Integer.toString(E)));
+>>>>>>> e1fb193 minor error, unrelated to main problem
 		
 		this.fontRenderer.drawString("Ethernano:"+Integer.toString(e), this.xSize/2+5, 54, 7777);
 		this.fontRenderer.drawString("Energy:"+Integer.toString(E), this.xSize/2-80, 54, 7777);
