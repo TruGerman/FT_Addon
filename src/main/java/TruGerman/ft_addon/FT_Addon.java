@@ -10,17 +10,12 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-<<<<<<< Upstream, based on branch 'beta' of https://github.com/TruGerman/FT_Addon
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.registries.ForgeRegistry;
 
 @Mod(modid = RefStrings.MODID, name = RefStrings.NAME, version = RefStrings.VERSION, acceptedMinecraftVersions = RefStrings.MCVERSION)
 
-=======
-
-@Mod(modid = RefStrings.MODID, name = RefStrings.NAME, version = RefStrings.VERSION, acceptedMinecraftVersions = RefStrings.MCVERSION)
-//gotta love how like 20% of this shit is actually my own code, but you have to start somewhere
->>>>>>> ac25635 Unnecessary comments
+//if I had to guess I'd say 20% of the code is mine, but you gotta start somewhere, right?
 public class FT_Addon 
 {
 	@Instance

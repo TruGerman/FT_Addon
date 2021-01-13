@@ -50,11 +50,6 @@ public class BlockEthernanoGenerator extends BlockBase
 		{
 			playerIn.openGui(FT_Addon.instance, RefStrings.GUI_ETHERNANO_GEN, worldIn, pos.getX(), pos.getY(), pos.getZ());
 				TileEntityEthernanoGenerator tileentity = (TileEntityEthernanoGenerator)worldIn.getTileEntity(pos);
-<<<<<<< Upstream, based on branch 'beta' of https://github.com/TruGerman/FT_Addon
-<<<<<<< Upstream, based on branch 'beta' of https://github.com/TruGerman/FT_Addon
-<<<<<<< Upstream, based on branch 'beta' of https://github.com/TruGerman/FT_Addon
-=======
->>>>>>> 7860701 I should probably avoid pushing builds with cheap debugging tricks still enabled
 				/*printValues(tileentity, playerIn);
 				playerIn.sendMessage(new TextComponentString("Server:"));
 				playerIn.sendMessage(new TextComponentString("Ethernano:"+Integer.toString(tileentity.getValue(3))));
@@ -81,50 +76,10 @@ public class BlockEthernanoGenerator extends BlockBase
 	public void printValues(TileEntityEthernanoGenerator te, EntityPlayer playerIn)
 	{
 		/*playerIn.sendMessage(new TextComponentString("Client:"));
-<<<<<<< Upstream, based on branch 'beta' of https://github.com/TruGerman/FT_Addon
 		playerIn.sendMessage(new TextComponentString("Ethernano:"+Integer.toString(te.getValue(3))));
 		playerIn.sendMessage(new TextComponentString("Energy:"+Integer.toString(te.getValue(1)))); */
 		
 	}
-=======
-=======
-				printValues(tileentity, playerIn);
-				playerIn.sendMessage(new TextComponentString("Server:"));
->>>>>>> c01adbc Small stuff
-				playerIn.sendMessage(new TextComponentString("Ethernano:"+Integer.toString(tileentity.getValue(3))));
-				playerIn.sendMessage(new TextComponentString("Energy:"+Integer.toString(tileentity.getValue(1))));
-				
-				
-		}
-		return true;
-	}
-	
-	@Override
-	public Item getItemDropped(IBlockState state, Random rand, int fortune) 
-	{
-		return null;
-	}
-	
-	@SideOnly(Side.CLIENT)
-    public void initModel() 
-	{
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0, new ModelResourceLocation(getRegistryName(), "inventory"));
-    }
-	
-<<<<<<< Upstream, based on branch 'beta' of https://github.com/TruGerman/FT_Addon
->>>>>>> 50e1f23 removed unused imports
-=======
-	@SideOnly(Side.CLIENT)
-	public void printValues(TileEntityEthernanoGenerator te, EntityPlayer playerIn)
-	{
-		playerIn.sendMessage(new TextComponentString("Client:"));
-=======
->>>>>>> 7860701 I should probably avoid pushing builds with cheap debugging tricks still enabled
-		playerIn.sendMessage(new TextComponentString("Ethernano:"+Integer.toString(te.getValue(3))));
-		playerIn.sendMessage(new TextComponentString("Energy:"+Integer.toString(te.getValue(1)))); */
-		
-	}
->>>>>>> c01adbc Small stuff
 	
 	
 	

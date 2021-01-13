@@ -22,8 +22,7 @@ public void onWorldLoad(ChunkEvent e)
 
 }
 
-
-//don't mind this, still WIP
+//yeah don't mind this, WIP
 @SubscribeEvent
 public void writeTileEntityNBTToItem(BreakEvent e) 
 {
