@@ -50,7 +50,8 @@ public class EthernanoStorage implements IEthernano
 	{
 		this.Ethernano = value;
 	}
-
+	
+	//I don't know why I left this here
 	public int receiveEthernanoReturnLeftover(int amount) 
 	{
 		if(canReceive)
