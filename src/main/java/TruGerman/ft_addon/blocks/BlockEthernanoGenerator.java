@@ -14,7 +14,6 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
@@ -49,13 +48,6 @@ public class BlockEthernanoGenerator extends BlockBase
 		if(!worldIn.isRemote)
 		{
 			playerIn.openGui(FT_Addon.instance, RefStrings.GUI_ETHERNANO_GEN, worldIn, pos.getX(), pos.getY(), pos.getZ());
-				TileEntityEthernanoGenerator tileentity = (TileEntityEthernanoGenerator)worldIn.getTileEntity(pos);
-				/*	printValues(tileentity, playerIn);
-				playerIn.sendMessage(new TextComponentString("Server:"));
-				playerIn.sendMessage(new TextComponentString("Ethernano:"+Integer.toString(tileentity.getValue(3))));
-				playerIn.sendMessage(new TextComponentString("Energy:"+Integer.toString(tileentity.getValue(1)))); */
-				
-				
 		}
 		return true;
 	}
@@ -71,17 +63,5 @@ public class BlockEthernanoGenerator extends BlockBase
 	{
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0, new ModelResourceLocation(getRegistryName(), "inventory"));
     }
-	
-	//is this a bad way of doing sides? do I look like I know?
-	@SideOnly(Side.CLIENT)
-	public void printValues(TileEntityEthernanoGenerator te, EntityPlayer playerIn)
-	{
-		/*playerIn.sendMessage(new TextComponentString("Client:"));
-		playerIn.sendMessage(new TextComponentString("Ethernano:"+Integer.toString(te.getValue(3))));
-		playerIn.sendMessage(new TextComponentString("Energy:"+Integer.toString(te.getValue(1)))); */
-		
-	}
-	
-	
-	
+
 }

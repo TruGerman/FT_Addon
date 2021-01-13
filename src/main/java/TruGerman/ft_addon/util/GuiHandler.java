@@ -17,9 +17,7 @@ public class GuiHandler implements IGuiHandler
 		{
 			case RefStrings.GUI_ETHERNANO_GEN: 
 			{
-				//debugging...
-				ContainerEthernanoGenerator container = new ContainerEthernanoGenerator(player.inventory, (TileEntityEthernanoGenerator)world.getTileEntity(new BlockPos(x, y, z)));
-				return container;
+				return new ContainerEthernanoGenerator(player.inventory, (TileEntityEthernanoGenerator)world.getTileEntity(new BlockPos(x, y, z)));
 			}
 		}
 		return null;
@@ -33,9 +31,7 @@ public class GuiHandler implements IGuiHandler
 		{
 			case RefStrings.GUI_ETHERNANO_GEN: 
 			{
-				//debugging...
-			GuiEthernanoGenerator gui = new GuiEthernanoGenerator(player.inventory, (TileEntityEthernanoGenerator)world.getTileEntity(new BlockPos(x, y, z)));
-			return gui;
+			return new GuiEthernanoGenerator(player.inventory, (TileEntityEthernanoGenerator)world.getTileEntity(new BlockPos(x, y, z)));
 			}
 		}
 		return null;
