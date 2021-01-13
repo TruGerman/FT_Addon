@@ -47,6 +47,7 @@ public class GuiEthernanoGenerator extends GuiContainer
 		int e = this.tileentity.getValue(3);
 		int E = this.tileentity.getValue(1);
 <<<<<<< Upstream, based on branch 'beta' of https://github.com/TruGerman/FT_Addon
+<<<<<<< Upstream, based on branch 'beta' of https://github.com/TruGerman/FT_Addon
 		//this.mc.player.sendMessage(new TextComponentString("e="+Integer.toString(e)));
 		//this.mc.player.sendMessage(new TextComponentString("E="+Integer.toString(E)));
 =======
@@ -89,6 +90,10 @@ public class GuiEthernanoGenerator extends GuiContainer
 		this.mc.player.sendMessage(new TextComponentString("e="+Integer.toString(e)));
 		this.mc.player.sendMessage(new TextComponentString("E="+Integer.toString(E)));
 >>>>>>> e1fb193 minor error, unrelated to main problem
+=======
+		//this.mc.player.sendMessage(new TextComponentString("e="+Integer.toString(e)));
+		//this.mc.player.sendMessage(new TextComponentString("E="+Integer.toString(E)));
+>>>>>>> 7860701 I should probably avoid pushing builds with cheap debugging tricks still enabled
 		
 		this.fontRenderer.drawString("Ethernano:"+Integer.toString(e), this.xSize/2+5, 54, 7777);
 		this.fontRenderer.drawString("Energy:"+Integer.toString(E), this.xSize/2-80, 54, 7777);

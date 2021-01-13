@@ -52,6 +52,9 @@ public class BlockEthernanoGenerator extends BlockBase
 				TileEntityEthernanoGenerator tileentity = (TileEntityEthernanoGenerator)worldIn.getTileEntity(pos);
 <<<<<<< Upstream, based on branch 'beta' of https://github.com/TruGerman/FT_Addon
 <<<<<<< Upstream, based on branch 'beta' of https://github.com/TruGerman/FT_Addon
+<<<<<<< Upstream, based on branch 'beta' of https://github.com/TruGerman/FT_Addon
+=======
+>>>>>>> 7860701 I should probably avoid pushing builds with cheap debugging tricks still enabled
 				/*printValues(tileentity, playerIn);
 				playerIn.sendMessage(new TextComponentString("Server:"));
 				playerIn.sendMessage(new TextComponentString("Ethernano:"+Integer.toString(tileentity.getValue(3))));
@@ -78,6 +81,7 @@ public class BlockEthernanoGenerator extends BlockBase
 	public void printValues(TileEntityEthernanoGenerator te, EntityPlayer playerIn)
 	{
 		/*playerIn.sendMessage(new TextComponentString("Client:"));
+<<<<<<< Upstream, based on branch 'beta' of https://github.com/TruGerman/FT_Addon
 		playerIn.sendMessage(new TextComponentString("Ethernano:"+Integer.toString(te.getValue(3))));
 		playerIn.sendMessage(new TextComponentString("Energy:"+Integer.toString(te.getValue(1)))); */
 		
@@ -114,8 +118,11 @@ public class BlockEthernanoGenerator extends BlockBase
 	public void printValues(TileEntityEthernanoGenerator te, EntityPlayer playerIn)
 	{
 		playerIn.sendMessage(new TextComponentString("Client:"));
+=======
+>>>>>>> 7860701 I should probably avoid pushing builds with cheap debugging tricks still enabled
 		playerIn.sendMessage(new TextComponentString("Ethernano:"+Integer.toString(te.getValue(3))));
-		playerIn.sendMessage(new TextComponentString("Energy:"+Integer.toString(te.getValue(1))));
+		playerIn.sendMessage(new TextComponentString("Energy:"+Integer.toString(te.getValue(1)))); */
+		
 	}
 >>>>>>> c01adbc Small stuff
 	
