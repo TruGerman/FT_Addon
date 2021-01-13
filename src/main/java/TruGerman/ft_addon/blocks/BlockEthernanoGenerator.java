@@ -78,7 +78,7 @@ public class BlockEthernanoGenerator extends BlockBase
 	{
 		/*playerIn.sendMessage(new TextComponentString("Client:"));
 		playerIn.sendMessage(new TextComponentString("Ethernano:"+Integer.toString(te.getValue(3))));
-		playerIn.sendMessage(new TextComponentString("Energy:"+Integer.toString(te.getValue(1)))); /*
+		playerIn.sendMessage(new TextComponentString("Energy:"+Integer.toString(te.getValue(1)))); */
 		
 	}
 	
