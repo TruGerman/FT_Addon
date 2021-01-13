@@ -13,9 +13,9 @@ import net.minecraft.util.text.TextComponentTranslation;
 
 public class TileEntityEthernanoGenerator extends TileEntity implements ITickable
 {
-	protected EthernanoStorage EStorage = new EthernanoStorage(5000, 1000);
-	protected CustomEnergyStorage Storage = new CustomEnergyStorage(50000);
-	public String customName;
+	private EthernanoStorage EStorage = new EthernanoStorage(5000, 1000);
+	private CustomEnergyStorage Storage = new CustomEnergyStorage(50000);
+	private String customName;
 
 
 	
@@ -23,11 +23,12 @@ public class TileEntityEthernanoGenerator extends TileEntity implements ITickabl
 	@Override
 	public NBTTagCompound writeToNBT(NBTTagCompound compound) 
 	{
-		
+		super.writeToNBT(compound);
 		this.EStorage.writeToNBT(compound);
 		this.Storage.writeToNBT(compound);
-		compound.setString("Name", getDisplayName().toString());
-		super.writeToNBT(compound);
+		compound.setString("Name", this.getDisplayName().toString());
+		compound.setInteger("EthernanoGUI", this.EStorage.getEthernano());
+		compound.setInteger("EnergyGUI", this.Storage.getEnergyStored());
 		return compound;
 	}
 	
@@ -35,9 +36,10 @@ public class TileEntityEthernanoGenerator extends TileEntity implements ITickabl
 	public void readFromNBT(NBTTagCompound compound) 
 	{
 		super.readFromNBT(compound);
-		customName = compound.getString("Name");
+		this.customName = compound.getString("Name");
 		this.EStorage.readFromNBT(compound);
 		this.Storage.readFromNBT(compound);
+
 		
 
 	}
@@ -91,11 +93,16 @@ public class TileEntityEthernanoGenerator extends TileEntity implements ITickabl
 	{
 		switch(ID) 
 		{
-		case 1: return this.Storage.getEnergyStored();
-		case 2: return this.Storage.getMaxEnergyStored();
-		case 3: return this.EStorage.getEthernano();
-		case 4: return this.EStorage.getMaxEthernano();
-		default: return 0;
+		case 1: 
+			return this.Storage.getEnergyStored();
+		case 2: 
+			return this.Storage.getMaxEnergyStored();
+		case 3: 
+			return this.EStorage.getEthernano();
+		case 4: 
+			return this.EStorage.getMaxEthernano();
+		default: 
+			return 0;
 		}
 
 	}
@@ -105,8 +112,10 @@ public class TileEntityEthernanoGenerator extends TileEntity implements ITickabl
 		switch(ID)
 		{
 		case 1: this.EStorage.setEthernano(Math.min(value, this.EStorage.getMaxEthernano()));
+		markDirty();
 		break;
 		case 2: this.Storage.setEnergy(Math.min(value, this.Storage.getMaxEnergyStored()));
+		markDirty();
 		break;
 		}
 		
@@ -133,6 +142,7 @@ public class TileEntityEthernanoGenerator extends TileEntity implements ITickabl
 	{
 		return this;
 	}
+	
 	
 	
  

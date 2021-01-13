@@ -139,10 +139,10 @@ public class EthernanoStorage implements IEthernano
 	@Override
 	public void writeToNBT(NBTTagCompound compound) 
 	{
-		compound.setInteger("Ethernano", Ethernano);
-		compound.setInteger("MaxEthernano", maxEthernano);
-		compound.setBoolean("canExtract", canExtract);
-		compound.setBoolean("canReceive", canReceive);
+		compound.setInteger("Ethernano", this.Ethernano);
+		compound.setInteger("MaxEthernano", this.maxEthernano);
+		compound.setBoolean("canExtract", this.canExtract);
+		compound.setBoolean("canReceive", this.canReceive);
 
 	}
 

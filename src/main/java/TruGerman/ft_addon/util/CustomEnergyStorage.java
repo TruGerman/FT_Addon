@@ -80,6 +80,7 @@ public class CustomEnergyStorage extends EnergyStorage
 
 	public void setEnergy(int value) 
 	{
-		this.energy = value;
-	}    
+		this.energy = value;	
+	}
+
 }
