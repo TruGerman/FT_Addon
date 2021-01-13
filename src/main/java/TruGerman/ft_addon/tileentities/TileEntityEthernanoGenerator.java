@@ -27,8 +27,6 @@ public class TileEntityEthernanoGenerator extends TileEntity implements ITickabl
 		this.EStorage.writeToNBT(compound);
 		this.Storage.writeToNBT(compound);
 		compound.setString("Name", this.getDisplayName().toString());
-		compound.setInteger("EthernanoGUI", this.EStorage.getEthernano());
-		compound.setInteger("EnergyGUI", this.Storage.getEnergyStored());
 		return compound;
 	}
 	
@@ -39,9 +37,6 @@ public class TileEntityEthernanoGenerator extends TileEntity implements ITickabl
 		this.customName = compound.getString("Name");
 		this.EStorage.readFromNBT(compound);
 		this.Storage.readFromNBT(compound);
-
-		
-
 	}
 	@Override
 	public void update() 
@@ -137,7 +132,7 @@ public class TileEntityEthernanoGenerator extends TileEntity implements ITickabl
 	{
 		return this.writeToNBT(getTileData());
 	}
-	
+	//why is this here anyway
 	public TileEntityEthernanoGenerator getTileEntity()
 	{
 		return this;
