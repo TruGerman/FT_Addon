@@ -23,7 +23,7 @@ public void onWorldLoad(ChunkEvent e)
 }
 
 //yeah don't mind this, WIP
-@SubscribeEvent
+/*@SubscribeEvent
 public void writeTileEntityNBTToItem(BreakEvent e) 
 {
 	World world = e.getWorld();
@@ -41,5 +41,6 @@ public void writeTileEntityNBTToItem(BreakEvent e)
 		}
 	}
 }
+*/
 	
 }

@@ -13,7 +13,7 @@ import net.minecraft.util.text.TextComponentTranslation;
 
 public class TileEntityEthernanoGenerator extends TileEntity implements ITickable
 {
-	private EthernanoStorage EStorage = new EthernanoStorage(5000, 1000);
+	private EthernanoStorage EStorage = new EthernanoStorage(5000);
 	private CustomEnergyStorage Storage = new CustomEnergyStorage(50000);
 	private String customName;
 
@@ -102,6 +102,11 @@ public class TileEntityEthernanoGenerator extends TileEntity implements ITickabl
 
 	}
 	//this probably doesn't work as intended
+	/**
+	 * Set the specified container's value
+	 * @param ID 1-2, Ethernano and Energy
+	 * @param value new value
+	 */
 	public void setValue(int ID, int value) 
 	{
 		switch(ID)
@@ -146,6 +151,14 @@ public class TileEntityEthernanoGenerator extends TileEntity implements ITickabl
 		return this.getNBT();
 	}
 	
+	public NBTTagCompound getTagForItem()
+	{
+		NBTTagCompound tag = new NBTTagCompound();
+		this.EStorage.writeToNBT(tag);
+		this.Storage.writeToNBT(tag);
+		tag.setString("Name", this.getDisplayName().toString());
+		return tag;
+	}
 	@Override
 	public void handleUpdateTag(NBTTagCompound tag) 
 	{
